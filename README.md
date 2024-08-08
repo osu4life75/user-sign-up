@@ -28,6 +28,11 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL
 );
 
+create table  gender (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    gender varchar (20) not null
+);
+
 -- Drop a table
 DROP TABLE users;
 
@@ -95,6 +100,8 @@ INNER JOIN orders ON users.id = orders.user_id;
 SELECT users.username, orders.order_id 
 FROM users 
 LEFT JOIN orders ON users.id = orders.user_id;
+
+sel
 
 -- Right join two tables
 SELECT users.username, orders.order_id 
